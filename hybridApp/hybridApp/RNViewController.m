@@ -7,7 +7,7 @@
 //
 
 #import "RNViewController.h"
-
+#import "CodePush.h"
 #import "RCTRootView.h"
 
 
@@ -20,7 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+    NSURL *jsCodeLocation;
+#ifdef DEBUG
+    jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+#else
+    jsCodeLocation = [CodePush bundleURL];
+#endif
+    
     RCTRootView *rootView =
     [[RCTRootView alloc] initWithBundleURL : jsCodeLocation
                          moduleName        : @"HybridApp"

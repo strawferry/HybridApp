@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DDACAFD19F443308125413F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D13FEF7A2284C1BBE6E9FA9 /* libz.tbd */; };
+		143B13FA223640D48F7C4135 /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 310AB028220C45638F4D8F0C /* libCodePush.a */; };
 		A142D35C1E10BFE6009720C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A142D35B1E10BFE6009720C2 /* main.m */; };
 		A142D35F1E10BFE6009720C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A142D35E1E10BFE6009720C2 /* AppDelegate.m */; };
 		A142D3621E10BFE7009720C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A142D3611E10BFE7009720C2 /* ViewController.m */; };
@@ -20,9 +22,22 @@
 		CEF95601BFF0114D7A95051B /* libPods-hybridApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C677083DCF407767E953B473 /* libPods-hybridApp.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A144300F1E3DBEC600F19B60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A4F3DC100D64CF483E0A9C3 /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = CodePush;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		310AB028220C45638F4D8F0C /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
 		462C7A3651284EB6D7D8504A /* Pods-hybridApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hybridApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-hybridApp/Pods-hybridApp.release.xcconfig"; sourceTree = "<group>"; };
 		4F9FA252903322AC3080F797 /* Pods-hybridApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hybridApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hybridApp/Pods-hybridApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8D13FEF7A2284C1BBE6E9FA9 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9A4F3DC100D64CF483E0A9C3 /* CodePush.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
 		A142D3571E10BFE6009720C2 /* hybridApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hybridApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A142D35B1E10BFE6009720C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A142D35D1E10BFE6009720C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +65,8 @@
 			files = (
 				A142D37B1E10C975009720C2 /* libReact.a in Frameworks */,
 				CEF95601BFF0114D7A95051B /* libPods-hybridApp.a in Frameworks */,
+				143B13FA223640D48F7C4135 /* libCodePush.a in Frameworks */,
+				0DDACAFD19F443308125413F /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +82,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3FAAA28BA91B43CF9090B270 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9A4F3DC100D64CF483E0A9C3 /* CodePush.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		A142D34E1E10BFE6009720C2 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +97,7 @@
 				A142D3581E10BFE6009720C2 /* Products */,
 				0A9C8AFCE2DCCF6CEEA5631C /* Pods */,
 				EB3FBF477A4BB8E5F1989809 /* Frameworks */,
+				3FAAA28BA91B43CF9090B270 /* Libraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,11 +139,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A144300C1E3DBEC600F19B60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A14430101E3DBEC600F19B60 /* libCodePush.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EB3FBF477A4BB8E5F1989809 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A142D37A1E10C975009720C2 /* libReact.a */,
 				C677083DCF407767E953B473 /* libPods-hybridApp.a */,
+				8D13FEF7A2284C1BBE6E9FA9 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,11 +186,12 @@
 		A142D34F1E10BFE6009720C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 820;
 				ORGANIZATIONNAME = ferryvip;
 				TargetAttributes = {
 					A142D3561E10BFE6009720C2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5884G5YLUQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -171,12 +207,28 @@
 			mainGroup = A142D34E1E10BFE6009720C2;
 			productRefGroup = A142D3581E10BFE6009720C2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A144300C1E3DBEC600F19B60 /* Products */;
+					ProjectRef = 9A4F3DC100D64CF483E0A9C3 /* CodePush.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A142D3561E10BFE6009720C2 /* hybridApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A14430101E3DBEC600F19B60 /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = A144300F1E3DBEC600F19B60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A142D3551E10BFE6009720C2 /* Resources */ = {
@@ -370,11 +422,19 @@
 			baseConfigurationReference = 4F9FA252903322AC3080F797 /* Pods-hybridApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5884G5YLUQ;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/React\"",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush",
+				);
 				INFOPLIST_FILE = hybridApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ferryvip.hybridApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -387,11 +447,19 @@
 			baseConfigurationReference = 462C7A3651284EB6D7D8504A /* Pods-hybridApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5884G5YLUQ;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/React\"",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush",
+				);
 				INFOPLIST_FILE = hybridApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ferryvip.hybridApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
